@@ -14,8 +14,8 @@
   <div class="col-sm-6 todolist">
     <h4 class="title">Todo List</h4>
     <span *ngIf = 'todos.length==0'>No item Available</span>
-    <div class="list-group" *ngFor = 'let item of todos;let i = index'>
-      <div class="list-group-item Item">
+    <div class="list-group">
+      <div class="list-group-item Item" *ngFor = 'let item of todos;let i = index'>
         {{item}}
         <input type="button" class="btn btn-warning edit" value="Edit" (click)="editItem(i)">
         <input type="button" class="btn btn-danger delete" value="Delete" (click)="deleteItem(i)">

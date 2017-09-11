@@ -19,7 +19,7 @@
 
 .todolist, .todoform {
   height: 400px;
-  background-color: #ddd;
+  background-color: #607D8B;
 }
 
 .Item {
@@ -29,6 +29,10 @@
 .edit, .delete {
   margin-top: -7px !important;
   float: right;
+}
+
+.delete {
+  margin-right: 5px;
 }
 
 .title {
