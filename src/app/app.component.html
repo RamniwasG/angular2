@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="col-sm-10">
+    <h3 class="text">
+      Angular 2 First Example
+    </h3>
+    <nav>
+    	<a [routerLink]="['/']">
+        Home
+      </a>
+      |
+    	<a [routerLink]="['/about']">
+        About
+      </a>
+      |
+    	<a [routerLink]="['/github', 'angular']">
+        Github Repos
+      </a>
+      |
+    	<a [routerLink]="['/contact']">
+        Contact Us
+      </a>
+      |
+      <a [routerLink]="['/todo']">
+        Todo App
+      </a>
+    </nav>
+    <main>
+    	<router-outlet></router-outlet>
+    </main>
+  </div>
+</div>
+
+<footer>
+  <p>Welcome to Angular2</p>
+  <p>© 2017</p>
+</footer>
+

@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-sm-5 todoform">
+    <h4 class="title">Todo Form</h4>
+    <!-- <form name="form" (ngSubmit)="submitForm()" [formGroup]="contactForm" novalidate> -->
+      <div class="form-group">
+        <label>Enter Your Item:</label>
+        <input type="text" [(ngModel)]="item" class="form-control" placeholder="Enter your item..">
+      </div>
+      <input type="button" (click)="addItem()" class="btn btn-default" value="Add">
+      <input type="button" (click)="updateItem()" class="btn btn-default" value="Update">
+    <!-- </form> -->
+  </div>
+  <div class="col-sm-1 todoform"></div>
+  <div class="col-sm-6 todolist">
+    <h4 class="title">Todo List</h4>
+    <span *ngIf = 'todos.length==0'>No item Available</span>
+    <div class="list-group" *ngFor = 'let item of todos;let i = index'>
+      <div class="list-group-item Item">
+        {{item}}
+        <input type="button" class="btn btn-warning edit" value="Edit" (click)="editItem(i)">
+        <input type="button" class="btn btn-danger delete" value="Delete" (click)="deleteItem(i)">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
